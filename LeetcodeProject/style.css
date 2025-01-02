@@ -1,0 +1,134 @@
+*{
+    margin :0;
+    padding :0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: #2f2f2d;
+    color : #a5ff08;
+    height : 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 60px;
+    /* margin: 580px; */
+    background-color: #5c5959;
+    border-radius: 10px;
+    border: 2px solid #a5ff08;
+    width: 50%;
+    max-width:600px;
+
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.user-container{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.user-input-container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#user-input{
+    padding: 0.4rem;
+    width: 70%;
+    border-radius: 5px;
+    border: none;
+}
+#search-btn{
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #a1fb07;
+    color: #0b0b0b;
+    cursor: pointer;
+}
+
+.stats-container{
+    
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding-top: 20px;
+    
+}
+
+.circle{
+    width: 120px;
+    height: 120px;
+    background-color: green;
+    border-radius: 50%;
+    border: 2.5px solid #a5ff08;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+    background: conic-gradient(#689d0d var(--progress-degree, 0%), #474843 0%);
+    flex-direction: column;
+
+}
+.circle span{
+    position : relative;
+    z-index: 2;
+}
+
+.progress{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stats-cards{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+h4{
+    font-size: 1rem;
+}
+
+.card{
+    background-color: #43433f;
+    width: 70%;
+    max-width: 290px;
+    padding: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border: 2px solid #fafafa;
+    border-radius: 10px;
+    font-size: 1rem;
+    min-height: 4rem;
+}
+
+#plant{
+    width: 10%;
+    height: 10%;
+    padding: 0px;
+}

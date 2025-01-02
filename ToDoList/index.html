@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input type="text" id="title" placeholder="ToDoList"><br><br>
+        <input type="text" id="description" placeholder="Todo description"><br><br>
+        <button id="btn" >Add todo</button>
+        <div id="container"></div>       
+                task here ->
+
+        <script>
+                let globalId = 1;
+
+
+                function createChild(title,description,id){
+                    const child = document.createElement("div");
+                    const firstGrandChildren = document.createElement("div");
+                    firstGrandChildren.innerHTML = title;
+                    const secondGrandChildren = document.createElement("div");
+                    secondGrandChildren.innerHTML = description;
+                    const thirdGrandChildren = document.createElement("button");
+                    thirdGrandChildren.innerHTML = "mark as done";
+                    child.appendChild(firstGrandChildren);
+                    child.appendChild(secondGrandChildren);
+                    child.appendChild(thirdGrandChildren);
+                    child.setAttribute("id",id);
+                    return child;
+                }
+                // function addTodo(){
+                //     const parent = document.getElementById("container");
+                //     const tit = document.getElementById("title").value;
+                //     const des = document.getElementById("description").value;
+                //     parent.appendChild(createChild(tit,des,globalId));
+                //     globalId++;
+                // }
+
+                //dynamic continuos updation of DOM.....
+                function updateDOMAccToState(st){
+                    const parent = document.getElementById("container");
+                    parent.innerHTML = "";
+                    for(let i=0;i<st.length;i++){
+                       parent.appendChild(createChild(st[i].title,st[i].description,st[i].id));
+                    }   
+                }
+                updateDOMAccToState([
+                {
+                    title: "go to study",
+                    description: "ja bsdk",
+                    id: 1,
+                }
+            ]);
+            
+        </script>
+</body>
+</html>
