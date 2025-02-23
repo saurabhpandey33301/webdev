@@ -9,9 +9,11 @@
   "author": "saurabh pandey",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "crops": "^2.0.0",
     "express": "^4.21.2",
+    "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.3",
     "nodemon": "^3.1.9",

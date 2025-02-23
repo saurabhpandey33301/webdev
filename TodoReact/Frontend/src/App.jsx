@@ -1,28 +1,32 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+
 import './App.css'
-import { CreateTodo } from './components/CreateTodo'
-import { Todos } from './components/Todo'
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
+import { Dashboard } from './components/Dashboard';
+import { Signin } from './components/Signin';
+import { Signup } from './components/Signup';
+import { Home } from './components/Home';
+
 
 function App() {
-  const [todos, setTodos] = useState([]);
-  
-  //use effect k chlte jb jb todos update hoga tb tb site  re-render hoga...
-  useEffect(()=>{
-      //u can use set timeInterval here to make site re-render after some interval.....
-      axios.get("http://localhost:3000/todos")
-      .then( Response =>{
-        setTodos(Response.data.todos);
-      })
-      
-    
-  },[todos]);
 
   return (
-    <div>
-    <CreateTodo ></CreateTodo>
-    <Todos  todos = {todos}></Todos>
-    </div>
+
+    <>
+    <BrowserRouter>
+        
+        <Routes>
+            <Route path="/dashboard" element={ <Dashboard/> } />
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={ <Signup/> } />
+            <Route path="/home" element={ <Home/> } />
+            <Route path="/" element={<Home/>}></Route>
+        </Routes>
+    </BrowserRouter>
+    </>
   )
 }
 

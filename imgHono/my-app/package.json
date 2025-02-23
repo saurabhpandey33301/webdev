@@ -1,0 +1,22 @@
+{
+  "name": "my-app",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify"
+  },
+  "dependencies": {
+    "@cloudinary/react": "^1.13.1",
+    "@cloudinary/url-gen": "^1.21.0",
+    "@hono/node-server": "^1.13.8",
+    "cloudinary": "^2.5.1",
+    "dotenv": "^16.4.7",
+    "hono": "^4.7.0",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "@types/node": "^22.13.1",
+    "wrangler": "^3.101.0"
+  }
+}
