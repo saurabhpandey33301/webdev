@@ -1,6 +1,5 @@
 console.log("Starting with JavaScript");
 
-
 //var is function scoped, global scoped but not block scoped.
 //var can be redeclared and updated.
 var age = 20;
@@ -73,6 +72,29 @@ const multiply = function multiplyFunc(a, b) {
     return a * b;
 };
 console.log(multiply(2, 3));
+
+//closure in js.........................................................................
+
+// closure is a function that has access to its own scope, the outer function's scope, and the global scope.
+//closure is created when a function is defined inside another function.
+//closure is a function which is bounded to all the refrences or the refrences in its lexical environment.
+
+function outerFunction() {
+    let outerVariable = 'I am from outer function';
+
+    function innerFunction() {
+        console.log(outerVariable); // Accessing outerVariable from the outer function
+    }
+    outerVariable = 'I am changed from outer function'; // Modifying outerVariable
+    // The inner function can still access the modified outerVariable.
+
+    return innerFunction; // Returning the inner function
+}
+
+const closureFunction = outerFunction(); // closureFunction now holds the innerFunction
+closureFunction(); // Calling the closureFunction, which accesses outerVariable
+
+
 
 
 //classes and default parameters in js..........................................................................
