@@ -94,9 +94,6 @@ function outerFunction() {
 const closureFunction = outerFunction(); // closureFunction now holds the innerFunction
 closureFunction(); // Calling the closureFunction, which accesses outerVariable
 
-
-
-
 //classes and default parameters in js..........................................................................
 //class is a blueprint for creating objects.
 
